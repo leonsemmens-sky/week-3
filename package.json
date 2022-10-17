@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "jest ./tests --watchAll",
     "test:d1:easy:addTwoNumbers": "jest ./tests/d1-tests/1-easy/addTwoNumbers --verbose --silent --runInBand",
     "test:d1:easy:subtractTwoNumbers": "jest ./tests/d1-tests/1-easy/subtractTwoNumbers --verbose --silent --runInBand",
     "test:d1:easy:multiplyTwoNumbers": "jest ./tests/d1-tests/1-easy/multiplyTwoNumbers --verbose --silent --runInBand",
@@ -22,7 +23,7 @@
     "url": "https://github.com/swe-assignments/week-3/issues"
   },
   "homepage": "https://github.com/swe-assignments/week-3#readme",
-  "dependencies": {
-    "jest": "^29.1.2"
+  "devDependencies": {
+    "jest": "^29.2.0"
   }
 }
