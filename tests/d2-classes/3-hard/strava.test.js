@@ -16,6 +16,7 @@ describe('Properties of new instance of Exercise Class (5,1200,3600,6000)', () =
         expect(myRun.steps).toBe(6000)
     })
 })
+
 describe('Methods of new instance of Exercise Class (5,1200,3600,6000)', () => {
 
     it('converts seconds to minutes and seconds', () => {
