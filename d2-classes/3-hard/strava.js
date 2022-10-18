@@ -17,7 +17,29 @@
             @return {number} - strideLength returns the average length per stride.
 */
 
+class Exercise {
+    constructor(distance, time, heartBeats, steps) {
+        this.distance = distance
+        this.time = time
+        this.heartBeats = heartBeats
+        this.steps = steps
+    }
 
+    toMinutesAndSeconds(seconds) {
+        return `${Math.floor(seconds / 60)}m:${Math.round(seconds % 60)}s`
+    }
 
+    pace() {
+        return this.toMinutesAndSeconds(this.time / this.distance)
+    }
+
+    beatsPerMinute() {
+        return Math.round(this.heartBeats / (this.time / 60))
+    }
+
+    strideLength() {
+        return (this.distance * 1000) / this.steps
+    }
+}
 
 module.exports = { Exercise }

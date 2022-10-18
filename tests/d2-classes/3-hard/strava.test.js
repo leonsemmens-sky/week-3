@@ -1,7 +1,8 @@
-const {Exercise} = require('../../../d2-classes/3-hard/strava')
+const { Exercise } = require('../../../d2-classes/3-hard/strava')
 let myRun = new Exercise(5, 1200, 3600, 6000)
+
 describe('Properties of new instance of Exercise Class (5,1200,3600,6000)', () => {
-    
+
     it('correctly assigns distance', () => {
         expect(myRun.distance).toBe(5)
     })
@@ -16,7 +17,7 @@ describe('Properties of new instance of Exercise Class (5,1200,3600,6000)', () =
     })
 })
 describe('Methods of new instance of Exercise Class (5,1200,3600,6000)', () => {
-    
+
     it('converts seconds to minutes and seconds', () => {
         expect(myRun.toMinutesAndSeconds(myRun.time)).toBe('20m:0s')
     })
@@ -27,7 +28,7 @@ describe('Methods of new instance of Exercise Class (5,1200,3600,6000)', () => {
         expect(Math.round(myRun.beatsPerMinute())).toBe(180)
     })
     it('strideLength returns the average length per stride.', () => {
-        expect(myRun.strideLength()).toBeCloseTo(0.83,2)
+        expect(myRun.strideLength()).toBeCloseTo(0.83, 2)
     })
-    
+
 })

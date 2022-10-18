@@ -1,5 +1,5 @@
 
-/* Define a new class called Laps
+/* Define a new class called Athlete
     The constructor will take the following arguments and set them as properties of any new instance.
             * @param {string} name 
     * @param {array} events -  
@@ -10,12 +10,26 @@
             * @param {string} event
             pushes the event argument to the events array property
 
-            deleteEvent
+        removeEvent
             * @param {string} event
             find and deletes the event from the events array
 
 
 */
 
+class Athlete {
+    constructor(name, events) {
+        this.name = name
+        this.events = events
+    }
 
-module.exports = {Athlete}
+    addEvent(event) {
+        this.events.push(event)
+    }
+
+    removeEvent(event) {
+        this.events = this.events.filter(ev => ev !== event)
+    }
+}
+
+module.exports = { Athlete }
